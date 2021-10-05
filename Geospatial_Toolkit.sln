@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geospatial_Engine", "Geospatial_Engine\Geospatial_Engine.csproj", "{827C0043-6823-454E-83BE-07524A012D2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geospatial_oM", "Geospatial_oM\Geospatial_oM.csproj", "{8831ADFA-0C73-4DF6-80C0-8973E167F058}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{827C0043-6823-454E-83BE-07524A012D2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{827C0043-6823-454E-83BE-07524A012D2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{827C0043-6823-454E-83BE-07524A012D2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{827C0043-6823-454E-83BE-07524A012D2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8831ADFA-0C73-4DF6-80C0-8973E167F058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8831ADFA-0C73-4DF6-80C0-8973E167F058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8831ADFA-0C73-4DF6-80C0-8973E167F058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8831ADFA-0C73-4DF6-80C0-8973E167F058}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {011C21EB-EE62-47A2-A72A-C5B124980E6E}
+	EndGlobalSection
+EndGlobal
