@@ -245,6 +245,10 @@ namespace BH.Engine.Geospatial
                 Reflection.Compute.RecordError("Cannot convert a null geospatial object");
                 return null;
             }
+            //if the zone has not been set
+            if (gridZone == 0)
+                gridZone = geospatial.UTMZone();
+
             BoundingBox boundingBox = new BoundingBox();
             boundingBox.Max = ToUTM(geospatial.Max,  gridZone);
             boundingBox.Min = ToUTM(geospatial.Min,  gridZone);

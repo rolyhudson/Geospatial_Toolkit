@@ -65,7 +65,7 @@ namespace BH.Engine.Geospatial
                 Reflection.Compute.RecordError("Cannot query a null geospatial object.");
                 return -1;
             }
-            return (UTMZone(geospatial.Min) + UTMZone(geospatial.Max))/2;
+            return (int)((UTMZone(geospatial.Min) + UTMZone(geospatial.Max)) / 2.0);
         }
 
         /***************************************************/
