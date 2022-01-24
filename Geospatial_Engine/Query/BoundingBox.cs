@@ -10,7 +10,7 @@
  * it under the terms of the GNU Lesser General Public License as published by  
  * the Free Software Foundation, either version 3.0 of the License, or          
  * (at your option) any later version.                                          
- *                                                                              
+ *                                                                              BH.oM.Reflection.Attributes
  * The BHoM is distributed in the hope that it will be useful,              
  * but WITHOUT ANY WARRANTY; without even the implied warranty of               
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the                 
@@ -21,7 +21,7 @@
  */
 
 using BH.oM.Geospatial;
-using BH.oM.Reflection.Attributes;
+using BH.oM.Base.Attributes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,7 +44,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot query a null geospatial object.");
+                Base.Compute.RecordError("Cannot query a null geospatial object.");
                 return null;
             }
             return BoundingBox(geospatial as dynamic);
@@ -59,7 +59,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot query a null geospatial object.");
+                Base.Compute.RecordError("Cannot query a null geospatial object.");
                 return null;
             }
             return new BoundingBox(){ Min = geospatial, Max = geospatial };
@@ -74,7 +74,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot query a null geospatial object.");
+                Base.Compute.RecordError("Cannot query a null geospatial object.");
                 return null;
             }
             return BoundingBox(geospatial.Points);
@@ -89,7 +89,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot query a null geospatial object.");
+                Base.Compute.RecordError("Cannot query a null geospatial object.");
                 return null;
             }
 
@@ -105,7 +105,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot query a null geospatial object.");
+                Base.Compute.RecordError("Cannot query a null geospatial object.");
                 return null;
             }
 
@@ -121,7 +121,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot query a null geospatial object.");
+                Base.Compute.RecordError("Cannot query a null geospatial object.");
                 return null;
             }
             return BoundingBox(geospatial.Polygons.SelectMany(p => p.Points));
@@ -136,7 +136,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot query a null geospatial object.");
+                Base.Compute.RecordError("Cannot query a null geospatial object.");
                 return null;
             }
             return BoundingBox(geospatial.Polygons.SelectMany(p => p.Polygons.SelectMany(x => x.Points)));
@@ -151,7 +151,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot query a null geospatial object.");
+                Base.Compute.RecordError("Cannot query a null geospatial object.");
                 return null;
             }
             return BoundingBox(geospatial.Geometry as dynamic);
@@ -166,7 +166,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot query a null geospatial object.");
+                Base.Compute.RecordError("Cannot query a null geospatial object.");
                 return null;
             }
             BoundingBox box = BoundingBox(geospatial.Features.First().Geometry as dynamic);
@@ -184,7 +184,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot query a null geospatial object.");
+                Base.Compute.RecordError("Cannot query a null geospatial object.");
                 return null;
             }
             BoundingBox box = BoundingBox(geospatial.Geometries.First() as dynamic);
@@ -224,7 +224,7 @@ namespace BH.Engine.Geospatial
         /***************************************************/
         private static BoundingBox BoundingBox(IGeospatial geospatial)
         {
-            Reflection.Compute.RecordWarning($"BoundingBox could not be found for {geospatial.GetType()}.");
+            Base.Compute.RecordWarning($"BoundingBox could not be found for {geospatial.GetType()}.");
             return null;
         }
     }

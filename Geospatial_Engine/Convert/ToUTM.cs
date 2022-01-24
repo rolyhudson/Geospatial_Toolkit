@@ -30,7 +30,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Concurrent;
 using System.ComponentModel;
-using BH.oM.Reflection.Attributes;
+using BH.oM.Base.Attributes;
 
 namespace BH.Engine.Geospatial
 {
@@ -49,7 +49,7 @@ namespace BH.Engine.Geospatial
         {
             if(geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot convert a null geospatial object");
+                Base.Compute.RecordError("Cannot convert a null geospatial object");
                 return null;
             }
             return ToUTM(geospatial as dynamic,  gridZone);
@@ -67,7 +67,7 @@ namespace BH.Engine.Geospatial
         {
             if (lat < -90 || lat > 90 || lon < -180 || lon > 180)
             {
-                Reflection.Compute.RecordError("One or more Point coordinates was outside the permitted ranges.");
+                Base.Compute.RecordError("One or more Point coordinates was outside the permitted ranges.");
                 return null;
             }
             //EagerLoad sets which CoordinateSystems are calculated set all to false except UTM_MGRS
@@ -92,7 +92,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot convert a null geospatial object");
+                Base.Compute.RecordError("Cannot convert a null geospatial object");
                 return null;
             }
             Point utmPoint = ToUTM(geospatial.Latitude, geospatial.Longitude, gridZone);
@@ -111,7 +111,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot convert a null geospatial object");
+                Base.Compute.RecordError("Cannot convert a null geospatial object");
                 return null;
             }
             CompositeGeometry composite = new CompositeGeometry();
@@ -141,7 +141,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot convert a null geospatial object");
+                Base.Compute.RecordError("Cannot convert a null geospatial object");
                 return null;
             }
             //if the zone has not been set
@@ -172,7 +172,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot convert a null geospatial object");
+                Base.Compute.RecordError("Cannot convert a null geospatial object");
                 return null;
             }
             //if the zone has not been set
@@ -201,7 +201,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot convert a null geospatial object");
+                Base.Compute.RecordError("Cannot convert a null geospatial object");
                 return null;
             }
             //if the zone has not been set
@@ -232,7 +232,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot convert a null geospatial object");
+                Base.Compute.RecordError("Cannot convert a null geospatial object");
                 return null;
             }
             //if the zone has not been set
@@ -264,7 +264,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot convert a null geospatial object");
+                Base.Compute.RecordError("Cannot convert a null geospatial object");
                 return null;
             }
             //if the zone has not been set
@@ -288,7 +288,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot convert a null geospatial object");
+                Base.Compute.RecordError("Cannot convert a null geospatial object");
                 return null;
             }
             //if the zone has not been set
@@ -308,7 +308,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot convert a null geospatial object");
+                Base.Compute.RecordError("Cannot convert a null geospatial object");
                 return null;
             }
             //if the zone has not been set
@@ -331,7 +331,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot convert a null geospatial object");
+                Base.Compute.RecordError("Cannot convert a null geospatial object");
                 return null;
             }
             //if the zone has not been set
@@ -349,7 +349,7 @@ namespace BH.Engine.Geospatial
 
         private static IGeometry ToUTM(GeoSp.IGeospatial geospatial, int gridZone = 0)
         {
-            Reflection.Compute.RecordError($"Unable to convert {geospatial.GetType()} to Universal Transverse Mercator Coordinates.");
+            Base.Compute.RecordError($"Unable to convert {geospatial.GetType()} to Universal Transverse Mercator Coordinates.");
             return null;
         }
     }

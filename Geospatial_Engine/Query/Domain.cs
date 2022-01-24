@@ -43,7 +43,7 @@ namespace BH.Engine.Geospatial
                 case "Altitude":
                     return new Domain(boundingBox.Min.Altitude, boundingBox.Max.Altitude);
                 default:
-                    Reflection.Compute.RecordError($"Axis {axis} is not one of the axes associated with the Geospatial.BoundingBox only Latitude, Longitude or Altitude are permitted axes.");
+                    Base.Compute.RecordError($"Axis {axis} is not one of the axes associated with the Geospatial.BoundingBox only Latitude, Longitude or Altitude are permitted axes.");
                     return null;
             }
         }

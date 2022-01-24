@@ -21,7 +21,7 @@
  */
 
 using BH.oM.Geospatial;
-using BH.oM.Reflection.Attributes;
+using BH.oM.Base.Attributes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,7 +44,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot query a null geospatial object.");
+                Base.Compute.RecordError("Cannot query a null geospatial object.");
                 return -1;
             }
             return UTMZone(geospatial as dynamic);
@@ -69,7 +69,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot query a null geospatial object.");
+                Base.Compute.RecordError("Cannot query a null geospatial object.");
                 return -1;
             }
             return UTMZone(geospatial.Longitude);
@@ -84,7 +84,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot query a null geospatial object.");
+                Base.Compute.RecordError("Cannot query a null geospatial object.");
                 return -1;
             }
             return (int)((UTMZone(geospatial.Min) + UTMZone(geospatial.Max)) / 2.0);
@@ -99,7 +99,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot query a null geospatial object.");
+                Base.Compute.RecordError("Cannot query a null geospatial object.");
                 return -1;
             }
             int zone = 0;
@@ -117,7 +117,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot query a null geospatial object.");
+                Base.Compute.RecordError("Cannot query a null geospatial object.");
                 return -1;
             }
             int zone = 0;
@@ -135,7 +135,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot query a null geospatial object.");
+                Base.Compute.RecordError("Cannot query a null geospatial object.");
                 return -1;
             }
             int zone = 0;
@@ -153,7 +153,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot query a null geospatial object.");
+                Base.Compute.RecordError("Cannot query a null geospatial object.");
                 return -1;
             }
             int zone = 0;
@@ -171,7 +171,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot query a null geospatial object.");
+                Base.Compute.RecordError("Cannot query a null geospatial object.");
                 return -1;
             }
             int zone = 0;
@@ -189,7 +189,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot query a null geospatial object.");
+                Base.Compute.RecordError("Cannot query a null geospatial object.");
                 return -1;
             }
             return UTMZone(geospatial.Geometry as dynamic); 
@@ -204,7 +204,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot query a null geospatial object.");
+                Base.Compute.RecordError("Cannot query a null geospatial object.");
                 return -1;
             }
             int zone = 0;
@@ -222,7 +222,7 @@ namespace BH.Engine.Geospatial
         {
             if (geospatial == null)
             {
-                Reflection.Compute.RecordError("Cannot query a null geospatial object.");
+                Base.Compute.RecordError("Cannot query a null geospatial object.");
                 return -1;
             }
             int zone = 0;
@@ -236,7 +236,7 @@ namespace BH.Engine.Geospatial
         /***************************************************/
         private static int UTMZone(IGeospatial geospatial)
         {
-            Reflection.Compute.RecordWarning("UTM zone could not be found.");
+            Base.Compute.RecordWarning("UTM zone could not be found.");
             return 0;
         }
     }

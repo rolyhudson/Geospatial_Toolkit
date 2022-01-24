@@ -13,10 +13,10 @@
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="xcopy &quot;$(TargetDir)$(TargetFileName)&quot;  &quot;C:\ProgramData\BHoM\Assemblies&quot; /Y" />
-    <Exec Command="xcopy &quot;$(TargetDir)CoordinateSharp.dll&quot;  &quot;C:\ProgramData\BHoM\Assemblies&quot; /Y" />
   </Target>
 
   <ItemGroup>
+    <PackageReference Include="CoordinateSharp" Version="2.12.1.1" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
   </ItemGroup>
 
@@ -37,8 +37,8 @@
     <Reference Include="BHoM_Engine">
       <HintPath>C:\ProgramData\BHoM\Assemblies\BHoM_Engine.dll</HintPath>
     </Reference>
-    <Reference Include="CoordinateSharp, Version=2.12.1.1, Culture=neutral, PublicKeyToken=f45e02df057b7725, processorArchitecture=MSIL">
-      <HintPath>..\packages\CoordinateSharp.2.12.1.1\lib\net40\CoordinateSharp.dll</HintPath>
+    <Reference Include="CoordinateSharp">
+      <HintPath>..\..\..\BH\Geospatial_Toolkit\packages\CoordinateSharp.2.12.1.1\lib\netstandard2.1\CoordinateSharp.dll</HintPath>
     </Reference>
     <Reference Include="Data_oM">
       <HintPath>C:\ProgramData\BHoM\Assemblies\Data_oM.dll</HintPath>
